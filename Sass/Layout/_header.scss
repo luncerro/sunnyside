@@ -1,0 +1,127 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 110vh;
+  background-image: url(../images/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+
+  padding: 5rem 3rem;
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .burger {
+    display: none;
+    font-size: 3rem;
+    color: $white;
+    @include respond(phone) {
+      display: block;
+    }
+  }
+  &__menu {
+    font-size: 2rem;
+    font-family: "Barlow", sans-serif;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      @include respond(phone) {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        flex-direction: column;
+        width: 90%;
+        overflow: hidden;
+        transition: 0.4s;
+        max-height: 0;
+      }
+      li {
+        @include respond(phone) {
+          width: 100%;
+          background-color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    ul.active {
+      @include respond(phone) {
+        max-height: 60%;
+      }
+    }
+    &--item {
+      display: block;
+      color: $white;
+      text-decoration: none;
+      @include respond(phone) {
+        color: $grayish-blue;
+        padding: 4rem;
+      }
+
+      &-m {
+        margin-right: 2.5rem;
+        @include respond(phone) {
+          margin-right: 0;
+        }
+      }
+      &-p {
+        display: inline-block;
+        background-color: $white;
+        padding: 1.5rem 4rem;
+        margin: 2rem 0;
+        border-radius: 50px;
+        color: black;
+        transition: 0.2s;
+        @include respond(phone) {
+          background-color: $yellow;
+        }
+      }
+      &-p:hover {
+        background-color: rgba($white, 0.3);
+        color: $white;
+        @include respond(phone) {
+          color: black;
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    margin-top: 15rem;
+    align-self: center;
+    font-size: 6rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+  &__arrow {
+    margin-top: 20rem;
+    align-self: center;
+  }
+}
+.arrow-up {
+  position: absolute;
+  top: calc(10% - 15px);
+  right: 8%;
+  overflow: hidden;
+  width: 0;
+  transform: translateY(100%);
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid $white;
+  transition: 0.3s;
+}
+.arrow-up.active {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $white;
+  transform: translateY(0);
+}

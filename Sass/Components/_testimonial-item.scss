@@ -1,0 +1,47 @@
+.testimonial-item {
+  display: flex;
+  padding: 1rem 3rem;
+  flex-direction: column;
+  @include respond(tablet) {
+    flex-basis: 100%;
+    padding: 0 30%;
+    margin-bottom: 10rem;
+  }
+  @include respond(phone) {
+    padding: 0 10%;
+  }
+  flex-basis: 33%;
+  align-items: center;
+  &__photo {
+    margin-bottom: 6rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &__paragraph {
+    padding: 0 2.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: $secondFont;
+    color: $very-dark-grayish-blue;
+    margin-bottom: 8rem;
+    flex-grow: 1;
+    @include respond(tablet) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__person {
+    font-size: 1.8rem;
+    color: $very-dark-desaturated-blue;
+    margin-bottom: 1rem;
+  }
+  &__job {
+    font-family: $secondFont;
+    font-size: 1.3rem;
+    color: $dark-grayish-blue;
+  }
+}

@@ -1,0 +1,49 @@
+.about-section {
+  &__box-text {
+    padding: 10%;
+    background-color: rgba($soft-red, 0.1);
+  }
+  &__heading {
+    font-size: 4rem;
+    color: $very-dark-desaturated-blue;
+    margin-bottom: 3rem;
+  }
+  &__paragraph {
+    font-size: 1.7rem;
+    font-family: $secondFont;
+    color: $dark-grayish-blue;
+    line-height: 2.6rem;
+    margin-bottom: 5rem;
+  }
+  &__button {
+    display: block;
+    width: 14rem;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $very-dark-desaturated-blue;
+    font-size: 1.6rem;
+    padding-left: 0.7rem;
+    overflow: hidden;
+  }
+  &__button::after {
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    z-index: -1;
+    left: 0;
+    content: "";
+    background-color: rgba($yellow, 0.4);
+    height: 10px;
+    border-radius: 80px;
+    width: 90%;
+    transform: translateX(-100%);
+    transition: 0.2s;
+  }
+  &__button--pink::after {
+    background-color: rgba($soft-red, 0.4);
+  }
+  &__button:hover::after {
+    transform: translateX(0);
+  }
+}

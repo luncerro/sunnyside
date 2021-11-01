@@ -1,0 +1,41 @@
+.about-section {
+  &__box-background {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    justify-content: flex-end;
+    background-size: cover;
+  }
+  &__box-image:nth-child(2) {
+    @include respond(phone) {
+      order: -1;
+    }
+  }
+  &__box-image--1 {
+    background-image: url(../images/desktop/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  &__box-image--2 {
+    background-image: url(../images/desktop/image-stand-out.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  &__box-background--1 {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+  }
+  &__box-background--2 {
+    background-image: url(../images/desktop/image-photography.jpg);
+  }
+  &__heading-back {
+    font-size: 3rem;
+  }
+  &__paragraph-back {
+    font-size: 1.4rem;
+    width: 45%;
+    text-align: center;
+    color: $dark-desaturated-cyan;
+  }
+}

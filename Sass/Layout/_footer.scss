@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $dark-moderated-cyan;
+  &__logo {
+    margin: 6rem 0 3rem 0;
+  }
+  &__menu,
+  &__socials {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 5rem;
+      li:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+.list-item,
+.social-item {
+  text-decoration: none;
+  color: $dark-desaturated-cyan;
+  font-size: 1.8rem;
+  font-family: $secondFont;
+  transition: 0.2s;
+}
+.list-item:hover,
+.social-item:hover {
+  color: $white;
+}

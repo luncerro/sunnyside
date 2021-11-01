@@ -1,0 +1,24 @@
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba($soft-red, 0.05);
+  padding: 10rem 8rem;
+  text-align: center;
+  &__heading {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: $grayish-blue;
+    font-weight: 900;
+  }
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
